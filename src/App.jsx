@@ -48,7 +48,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-dvh w-full bg-gradient-to-b flex flex-col p-10 gap-10 items-center from-blue-100 to-blue-300">
+    <div className="min-h-dvh w-full  flex flex-col p-10 gap-10 items-center bg-slate-700">
       <main
         className="flex flex-col gap-10
       ">
@@ -57,8 +57,10 @@ export default function App() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-4 py-2 rounded ${
-                activeTab === tab.id ? "bg-white text-black" : "text-gray-700"
+              className={`px-4 py-2 rounded text-white ${
+                activeTab === tab.id
+                  ? "bg-slate-500 text-black"
+                  : "text-gray-700"
               }`}>
               {tab.label}
             </button>
